@@ -4,9 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const app = (0, express_1.default)();
-const task = require("./routes/task");
-//routes
-app.use('/api/v1', task);
-app.listen(3000);
-console.log('port 3000 conected...');
+const router = express_1.default.Router();
+const { getAllTasks, createTask } = require("../controllers/task");
+router.route("/").get(getAllTasks).post(createTask);
+module.exports = router;

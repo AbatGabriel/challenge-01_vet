@@ -1,20 +1,10 @@
-import express, {Request, Response, NextFunction} from 'express'
-import { json } from 'body-parser'
-
-import todRouter from './routes/route_test'
-
+import express  from "express"
 const app = express()
+const task = require("./routes/task")
 
-app.use(json())
-
-app.use('/todos', todRouter)
-
-app.use((err: Error,req: Request,res: Response,next: NextFunction)=>{
-    res.status(500).json({message:err.message})
-})
-
+//routes
+app.use('/api/v1', task)
 
 app.listen(3000)
-
 
 console.log('port 3000 conected...')
