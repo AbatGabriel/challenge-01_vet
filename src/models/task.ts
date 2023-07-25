@@ -1,9 +1,13 @@
-import mongoose from "mongoose"
+import {Schema,model} from "mongoose"
 
-const taskSchema = new mongoose.Schema({
-     id:Number,
-     name:String
+const taskSchema = new Schema({
+    name:{
+        type:String,
+        required:[true,'must provide name'],
+        trim:true,
+        maxlength:[20,'name can not be more than 20 characters']
+    },
     }
 )
 
-module.exports = mongoose.model('Task',taskSchema)
+export default model('Task',taskSchema)
