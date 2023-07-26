@@ -1,6 +1,6 @@
 import express  from "express"
 const app = express()
-const task = require("./routes/task")
+const task = require("./routes/taskTutor")
 
 const connectDB = require('./db/connect')
 require('dotenv').config()

@@ -1,11 +1,6 @@
 import {Schema,model} from "mongoose"
 
 const taskSchema = new Schema({
-    _id:{
-        type: Number,
-        required:[true,'id not provide'],
-
-    },
     name:{
         type:String,
         required:[true,'must provide name'],
