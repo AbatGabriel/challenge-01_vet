@@ -1,7 +1,7 @@
 import {Schema,model} from "mongoose"
 
 const taskSchema = new Schema({
-    id:{
+    _id:{
         type: Number,
         required:[true,'id not provide'],
 
@@ -36,5 +36,6 @@ const taskSchema = new Schema({
     }
     }
 )
+
 
 export default model('Task',taskSchema)

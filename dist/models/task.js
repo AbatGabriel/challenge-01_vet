@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = require("mongoose");
 const taskSchema = new mongoose_1.Schema({
-    id: {
+    _id: {
         type: Number,
         required: [true, 'id not provide'],
     },
