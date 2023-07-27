@@ -1,36 +1,35 @@
 import {Schema,model} from "mongoose"
 
-const taskTutorSchema = new Schema({
+const taskPetSchema = new Schema({
     name:{
         type:String,
         required:[true,'must provide name'],
         trim:true,
         maxlength:[20,'name can not be more than 20 characters']
     },
-    phone:{
+    species:{
         type:String,
-        required:[true,'must provide phone number'],
+        required:[true,'must provide specie'],
         trim:true,
         maxlength:[14,'name can not be more than 14']
     },
-    email:{
+    carry:{
         type:String,
-        required:[true,'must provide email'],
+        required:[true,'must provide a carry'],
+        trim:true,
+    },
+    weight:{
+        type:Number,
+        required:[true,'must provide a weight'],
         trim:true,
     },
     date_of_birth:{
         type:String,
         required:[true,'must provide a date'],
         trim:true,
-    },
-    zip_code:{
-        type:String,
-        required:[true,'must provide zip-code'],
-        trim:true,
-        maxlength:[9,'name can not be more than 9 characters']
     }
     }
 )
 
 
-export default model('TaskTutor',taskTutorSchema)
+export default model('TaskPet',taskPetSchema)
