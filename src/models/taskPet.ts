@@ -27,6 +27,10 @@ const taskPetSchema = new Schema({
         type:String,
         required:[true,'must provide a date'],
         trim:true,
+    },
+    tutorId:{
+        type: Schema.Types.ObjectId,
+        ref: "TaskTutor"
     }
     }
 )

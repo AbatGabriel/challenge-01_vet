@@ -6,8 +6,29 @@ import TaskTutor from "../models/taskTutor"
 
 const getAllTutors:RequestHandler = async (req,res) =>{
     try {
-        const tasks = await TaskTutor.find({})
-        res.status(200).json({sucess:true,data:{tasks,nbHits:TaskTutor.length} })
+        const tutors = await TaskTutor.aggregate([
+            {
+                $lookup: {
+                    from: "taskpets",
+                    localField: "_id",
+                    foreignField: "tutorId",
+                    as: "pets",
+                },
+            },
+            {
+                $project: {
+                    _id: 1,
+                    name: 1,
+                    phone: 1,
+                    email: 1,
+                    date_of_birth: 1,
+                    zip_code: 1,
+                    pets: 1,
+                },
+            },
+        ])
+        const tasks = await tutors
+        res.status(200).json({sucess:true,tasks })
     } catch (error) {
         res.status(500).json({msg: error})
     }

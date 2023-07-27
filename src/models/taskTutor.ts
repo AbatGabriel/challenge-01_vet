@@ -28,7 +28,9 @@ const taskTutorSchema = new Schema({
         required:[true,'must provide zip-code'],
         trim:true,
         maxlength:[9,'name can not be more than 9 characters']
-    }
+    },
+    
+    pets:[]
     }
 )
 
