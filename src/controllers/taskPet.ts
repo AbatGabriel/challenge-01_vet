@@ -18,7 +18,7 @@ const createPet:RequestHandler = async (req,res) =>{
             return res.status(404).json({msg:`No tutor with id : ${taskID}` })
         } 
 
-        res.status(201).json({taskID,createPet})
+        res.status(200).json({taskID,createPet})
         
 
     } catch (error) {

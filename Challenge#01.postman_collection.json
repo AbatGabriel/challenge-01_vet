@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "4efcb93b-3065-4055-8e49-c8f5e35d77ca",
+		"name": "Challenge#01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23181571"
+	},
+	"item": [
+		{
+			"name": "Get All Tutors",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{URL}}/tutors"
+			},
+			"response": []
+		},
+		{
+			"name": "Create tutor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"jonas\",\r\n    \"phone\": \"85989323895\",\r\n    \"email\": \"jonas@paidepet.com\",\r\n    \"date_of_birth\": \"1993-12-12 10:10\",\r\n    \"zip_code\": \"61760000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{URL}}/tutor"
+			},
+			"response": []
+		},
+		{
+			"name": "Update tutor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"pablo\",\r\n    \"phone\": \"85989323895\",\r\n    \"email\": \"pablo@paidepet.com\",\r\n    \"date_of_birth\": \"1993-12-12 10:10\",\r\n    \"zip_code\": \"50003030\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/tutor/:id",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tutor",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete tutor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/tutor/:id",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tutor",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"bob\",\r\n    \"species\": \"cat\",\r\n    \"carry\": \"p\",\r\n    \"weight\": 5,\r\n    \"date_of_birth\": \"1993-12-12 10:10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/pet/:tutorId",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"pet",
+						":tutorId"
+					],
+					"variable": [
+						{
+							"key": "tutorId",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update pet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Lilo\",\r\n    \"species\": \"dog\",\r\n    \"carry\": \"m\",\r\n    \"weight\": 7,\r\n    \"date_of_birth\": \"1996-05-07 12:13\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/pet/:petId/tutor/:tutorId",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"pet",
+						":petId",
+						"tutor",
+						":tutorId"
+					],
+					"variable": [
+						{
+							"key": "petId",
+							"value": null
+						},
+						{
+							"key": "tutorId",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete pet",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/pet/:petId/tutor/:tutorId",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"pet",
+						":petId",
+						"tutor",
+						":tutorId"
+					],
+					"variable": [
+						{
+							"key": "petId",
+							"value": null
+						},
+						{
+							"key": "tutorId",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
