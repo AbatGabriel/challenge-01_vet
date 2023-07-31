@@ -30,7 +30,7 @@
 
   
 
-1. Para executar o projeto será necessário primeiro baixalo em sua máquina, isto é possível ser feito através do comando "git clone (link do repositório)" no terminal, pode ser feito no terminal 
+1. Para executar o projeto será necessário primeiro baixá-lo em sua máquina, isto é possível ser feito através do comando "git clone (link do repositório)" no terminal, pode ser feito no terminal 
 
     do editor de código usado, caso o usuário não tenha tanta experiência, é possível cloná-lo através do github desktop ou baixá-lo normalmente pelo navegador. 
 
@@ -38,13 +38,14 @@
 
 2. Após a instalação do projeto, será necessário instalar as dependências necessárias e compilar os arquivos dentro da pasta src para que o projeto funcione, através do terminal no Visual Studio Code, digite 
 
-   "npm install" para que as dependências sejam instaladas no projeto (você verá uma pasta node_modules ser criada), para compilar os arquivos .ts dentro da pasta src basta executar o comando "tsc -w", 
+   "npm install" para que as dependências sejam instaladas no projeto (você verá uma pasta node_modules ser criada), para compilar os arquivos .ts dentro da pasta src, primeiro instale de forma global
+    o typescript, com o comando "npm install -g typescript", após a instalção, basta executar o comando "tsc -w", 
 
     isso irá gerar uma pasta dist no projeto, após isso aperte "crtl + c" para encerrar o watch mode. 
 
     
 
-3. Para fazer o programa executar corretamente é necessário a criação do arquivo ".env", entre no site "https://cloud.mongodb.com" e crie uma conta, apos a criação da conta, crie um novo projeto gratuito, 
+4. Para fazer o programa executar corretamente é necessário a criação do arquivo ".env", entre no site "https://cloud.mongodb.com" e crie uma conta, apos a criação da conta, crie um novo projeto gratuito, 
 
    (escolha o nome que achar melhor), com a criação do projeto feita, abra-o e clique na opção "Connect", clique em drivers, após todo esse processo poderá ser visto algo semelhante a 
 
@@ -52,7 +53,7 @@
 
   
 
-4. Para a parte final de configuração do projeto, abra o Postman, na opção import abra o arquivo "Challenge#01.postman_collection", este arquivo é essencial para fazer os posts, deletes, puts e gets do projeto. 
+5. Para a parte final de configuração do projeto, abra o Postman, na opção import abra o arquivo "Challenge#01.postman_collection", este arquivo é essencial para fazer os posts, deletes, puts e gets do projeto. 
 
   
 
