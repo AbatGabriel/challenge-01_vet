@@ -2,9 +2,13 @@
 
   
 
-> Status: Em desenvolvimento 
+> Status: Completo
 
-  
+
+
+### Desenvolvedor do API.
+Gabriel Abat gabriel.abat.pb@compasso.com.br
+
 
 ### Está é uma api que foi desenvolvida para registrar os tutores e pets a um banco de dados, relacioná-los através da ID, deletá-los e atualizá-los. 
 
